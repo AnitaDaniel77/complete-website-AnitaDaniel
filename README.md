@@ -20,7 +20,7 @@ The starter repository was roughly 70% complete, with 25 intentional HTML errors
 
 ## Issues Found
 
-A full list of 18 identified issues is documented in `design/issues-document.md`. In summary, the starter code had:
+A full list of 18 identified issues is documented in `design/Issues Document.docx`, alongside the wireframe in `design/wireframe.pdf`. In summary, the starter code had:
 - No semantic HTML tags anywhere (all `<div>`s)
 - No navigation menu on any page
 - Missing `<meta charset>` and `lang` attributes
