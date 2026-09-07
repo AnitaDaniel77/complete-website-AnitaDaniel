@@ -1,29 +1,46 @@
-/* Basic styles with errors and omissions */
+/* Fixed styles — see comments for each correction */
 
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif; /* added fallback font */
     margin: 0;
     padding: 0;
     color: #333;
 }
 
-.header {
+header {
     background-color: #222;
     color: white;
     padding: 20px;
-    /* Missing: proper alignment */
+    display: flex; /* fixes missing alignment */
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header h1 {
+header h1 {
     margin: 0;
 }
 
-/* Navigation styling missing completely */
+/* Navigation styling — was completely missing */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover { /* pseudo-class #1 */
+    text-decoration: underline;
+}
 
 .hero {
     padding: 50px;
-    background-color: lightblue;
-    /* Poor colour contrast */
+    background-color: #cfe8f3; /* fixed poor colour contrast against dark text */
 }
 
 .hero h2 {
@@ -32,34 +49,71 @@ body {
 
 .hero img {
     width: 100%;
-    /* Missing: alt text handled in HTML, but sizing issues here */
+    max-width: 600px; /* fixes oversized image on large screens */
+    display: block;
+    margin: 0 auto;
 }
-
-/* Missing: Only using 2-3 selector types, need 5+ */
-/* Missing: Pseudo-classes not used */
-/* Missing: Combination selectors not used */
 
 .intro {
     padding: 30px;
+    border: 1px solid #ddd; /* box model: border */
+    margin-bottom: 20px; /* box model: margin */
 }
 
-/* Form styling incomplete */
-form input {
-    display: block;
-    margin: 10px 0;
+/* Table styling — was missing */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
 
-/* Missing: Box model demonstration (margin, padding, border) */
-/* Missing: Block vs inline elements styling */
-/* Missing: Text and colour styling variety */
-/* Missing: Table styling */
-
-.footer {
-    background-color: gray;
-    color: white;
-    padding: 20px;
-    /* Wrong alignment */
+th, td { /* combination selector */
+    border: 1px solid #ccc;
+    padding: 10px; /* box model: padding */
     text-align: left;
 }
 
-/* Code quality issues: inconsistent spacing, poor naming, no comments */
+thead {
+    background-color: #222;
+    color: white;
+}
+
+/* Form styling completed */
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0; /* box model: margin */
+    padding: 8px; /* box model: padding */
+    border: 1px solid #999; /* box model: border */
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover { /* pseudo-class #2 */
+    background-color: #444;
+}
+
+footer {
+    background-color: #4d4d4d; /* darkened from "gray" to pass 4.5:1 contrast with white text */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}

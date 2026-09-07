@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- lang attribute added for accessibility -->
 <head>
+    <meta charset="UTF-8"> <!-- character encoding, required for W3C validation -->
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="header">
+    <header> <!-- semantic tag replacing div.header -->
         <h1>My Portfolio</h1>
-        <!-- Navigation missing -->
-    </div>
-    
-    <div class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>I am a web developer passionate about creating beautiful websites.</p>
-        <img src="images/hero.jpg">
-    </div>
-    
-    <div class="intro">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
+        <nav> <!-- nav menu required on all 4 pages -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!-- semantic wrapper for primary page content -->
+        <section class="hero"> <!-- semantic tag replacing div.hero -->
+            <h2>Welcome to My Portfolio</h2>
+            <p>I am a web developer passionate about creating beautiful websites.</p>
+            <img src="images/hero.jpg" alt="Web developer workspace with laptop and code on screen"> <!-- alt text required -->
+        </section>
+
+        <section class="intro"> <!-- semantic tag replacing div.intro -->
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+    </main>
+
+    <footer> <!-- semantic tag replacing div.footer -->
+        <p>Contact: <a href="mailto:anita.daniel@umuzi.org">anita.daniel@umuzi.org</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/anita-daniel-2929b513a/" target="_blank" rel="noopener">LinkedIn</a> |
+            <a href="https://github.com/AnitaDaniel77" target="_blank" rel="noopener">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>
