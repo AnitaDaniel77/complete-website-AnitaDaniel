@@ -1,4 +1,4 @@
-/* Fixed styles — see comments for each correction */
+/* Fixed styles see comments for each correction */
 
 body {
     font-family: Arial, sans-serif; /* added fallback font */
@@ -20,7 +20,7 @@ header h1 {
     margin: 0;
 }
 
-/* Navigation styling — was completely missing */
+/* Navigation styling was completely missing */
 nav ul {
     list-style: none;
     display: flex;
@@ -47,11 +47,16 @@ nav a:hover { /* pseudo-class #1 */
     font-size: 36px;
 }
 
-.hero img {
-    width: 100%;
-    max-width: 600px; /* fixes oversized image on large screens */
+/* All content images capped to a sensible size fixes oversized hero/about/project images */
+main img {
+    max-width: 100%; /* never wider than its container */
+    max-height: 400px; /* caps height so large photos don't dominate the page */
+    object-fit: cover; /* crops neatly to fill the space instead of stretching or overflowing */
     display: block;
-    margin: 0 auto;
+}
+
+.hero img {
+    margin: 0 auto; /* center specifically within the hero section */
 }
 
 .intro {
@@ -60,7 +65,7 @@ nav a:hover { /* pseudo-class #1 */
     margin-bottom: 20px; /* box model: margin */
 }
 
-/* Table styling — was missing */
+/* Table styling was missing */
 table {
     width: 100%;
     border-collapse: collapse;
