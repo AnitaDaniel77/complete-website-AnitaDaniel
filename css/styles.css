@@ -38,6 +38,12 @@ nav a:hover { /* pseudo-class #1 */
     text-decoration: underline;
 }
 
+/* shows which page you're on, styled to match the hover state so it feels consistent */
+nav a[aria-current="page"] {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .hero {
     padding: 50px;
     background-color: #cfe8f3; /* fixed poor colour contrast against dark text */
@@ -83,6 +89,11 @@ thead {
     color: white;
 }
 
+/* stripes the skills table so rows are easier to track across the page */
+#skills-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 /* Form styling completed */
 form input,
 form textarea {
@@ -110,6 +121,19 @@ form button {
 
 form button:hover { /* pseudo-class #2 */
     background-color: #444;
+}
+
+/* keyboard users need to see where they are, not just mouse hover */
+#contact-form input:focus,
+#contact-form textarea:focus,
+#contact-form button:focus {
+    outline: 2px solid #222;
+    outline-offset: 2px;
+}
+
+/* opens in a new tab, so give it a slightly different look to flag that */
+a[target="_blank"] {
+    border-bottom: 1px dotted currentcolor;
 }
 
 footer {
