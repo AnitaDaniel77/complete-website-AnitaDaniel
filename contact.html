@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive scaling on mobile -->
+    <meta name="description" content="Contact Anita Daniel get in touch via the form below or through email, LinkedIn, or GitHub."> <!-- SEO/accessibility -->
     <title>Contact</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -13,7 +15,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li> <!-- marks this as the current page -->
             </ul>
         </nav>
     </header>
@@ -22,7 +24,7 @@
         <section>
             <h2>Get In Touch</h2>
 
-            <form>
+            <form id="contact-form"> <!-- ID selector so this specific form can be styled -->
                 <label for="name">Name</label> <!-- label added, linked via for/id -->
                 <input type="text" id="name" name="name" placeholder="Name" required> <!-- required = validation attribute -->
 
