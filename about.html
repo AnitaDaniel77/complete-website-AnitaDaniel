@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive scaling on mobile -->
+    <meta name="description" content="About Anita Daniel — IMI Java Trainee at Capitec Bank, background, skills, and current learning tracks."> <!-- SEO/accessibility -->
     <title>Anita Daniel — About</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -11,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li> <!-- marks this as the current page -->
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -34,7 +36,7 @@
             <p>On a deliberate path toward becoming a professional software engineer, and I'm just getting started.</p>
 
             <h3>Skills</h3>
-            <table>
+            <table id="skills-table"> <!-- ID selector so this table can be styled specifically -->
                 <thead>
                     <tr>
                         <th>Skill</th>
